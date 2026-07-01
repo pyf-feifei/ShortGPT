@@ -49,9 +49,9 @@ class ShortGptUI(AbstractBaseUI):
         _patch_gradio_api_info()
         shortGptUI = self.create_interface()
         if not getattr(self, 'colab', False):
-                    print("\n\n********************* STARTING SHORGPT **********************")
+                    print("\n\n********************* STARTING SHORTGPT **********************")
                     print("\nShortGPT is running here 👉 http://localhost:31415\n")
-                    print("********************* STARTING SHORGPT **********************\n\n")
+                    print("********************* STARTING SHORTGPT **********************\n\n")
         shortGptUI.queue().launch(server_port=31415, height=1000, allowed_paths=["public/","videos/","fonts/"], share=self.colab, server_name="0.0.0.0")
 
 

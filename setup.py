@@ -7,7 +7,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
     long_description = "\n" + fh.read()
 
-VERSION = '0.1.31'
+VERSION = '0.1.32'
 DESCRIPTION = 'Automating video and short content creation with AI'
 LONG_DESCRIPTION = 'A powerful tool for automating content creation. It simplifies video creation, footage sourcing, voiceover synthesis, and editing tasks.'
 
@@ -24,7 +24,7 @@ setup(
     package_data={'': ['*.yaml', '*.json']},    # This will include all yaml files in package
     install_requires=[
         'python-dotenv', 
-        "openai==1.37.2", 
+        "openai>=1.37.2", 
         'tiktoken',
         'tinydb',
         'tinymongo',
@@ -33,7 +33,7 @@ setup(
         'torch',
         'whisper-timestamped',
         'torchaudio',
-        'pillow==10.4.0',
+        'pillow>=10.4.0',
         'edge-tts',
         'moviepy==2.1.2',
         'progress',

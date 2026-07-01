@@ -78,7 +78,7 @@ def llm_completion(chat_prompt="", system="", temp=0.7, max_tokens=2000, remove_
         model = "gpt-4o-mini"
     elif gemini_key:
         client = OpenAI(api_key=gemini_key, base_url="https://generativelanguage.googleapis.com/v1beta/openai/")
-        model = "gemini-2.0-flash-lite-preview-02-05"
+        model = "gemini-3.5-flash"
     else:
         raise Exception("No OpenAI or Gemini API Key found for LLM request")
     max_retry = 5
